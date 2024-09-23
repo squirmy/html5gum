@@ -281,7 +281,7 @@ pub(crate) mod states {
                     emit_current_tag_and_switch_to!(slf, Data)
                 }
                 Some(x) if x.is_ascii_alphabetic() => {
-                    slf.emitter.push_tag_name(&[x.to_ascii_lowercase()]);
+                    slf.emitter.push_tag_name(&[x]);
                     slf.machine_helper.temporary_buffer.push(x);
                     cont!()
                 }
@@ -342,7 +342,7 @@ pub(crate) mod states {
                     emit_current_tag_and_switch_to!(slf, Data)
                 }
                 Some(x) if x.is_ascii_alphabetic() => {
-                    slf.emitter.push_tag_name(&[x.to_ascii_lowercase()]);
+                    slf.emitter.push_tag_name(&[x]);
                     slf.machine_helper.temporary_buffer.push(x);
                     cont!()
                 }
@@ -407,10 +407,10 @@ pub(crate) mod states {
                     emit_current_tag_and_switch_to!(slf, Data)
                 }
                 Some(x) if x.is_ascii_alphabetic() => {
-                    slf.emitter.push_tag_name(&[x.to_ascii_lowercase()]);
+                    slf.emitter.push_tag_name(&[x]);
                     slf.machine_helper
                         .temporary_buffer
-                        .push(x.to_ascii_lowercase());
+                        .push(x);
                     cont!()
                 }
                 c => {
@@ -593,7 +593,7 @@ pub(crate) mod states {
                     emit_current_tag_and_switch_to!(slf, Data)
                 }
                 Some(x) if x.is_ascii_alphabetic() => {
-                    slf.emitter.push_tag_name(&[x.to_ascii_lowercase()]);
+                    slf.emitter.push_tag_name(&[x]);
                     slf.machine_helper.temporary_buffer.extend(&[x]);
                     cont!()
                 }
